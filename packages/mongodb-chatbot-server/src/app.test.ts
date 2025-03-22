@@ -11,7 +11,7 @@ describe("App", () => {
     app = await makeApp({
       ...appConfig,
       corsOptions: {
-        origin: ["http://localhost:3000", "http://example.com"],
+        origin: ["/api", "http://example.com"],
       },
     });
   });

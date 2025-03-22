@@ -175,13 +175,13 @@ Have fun!
 You can also query the server directly with curl. To create a new conversation:
 
 ```shell
-curl -X POST http://localhost:3000/api/v1/conversations/
+curl -X POST /api/v1/conversations/
 ```
 
 This creates a new conversation with an `_id` field. You can append messages to the conversation with: 
 
 ```shell
-curl --location 'http://localhost:3000/api/v1/conversations/{conversationId}/messages?stream=false' \
+curl --location '/api/v1/conversations/{conversationId}/messages?stream=false' \
 --header 'Origin: http://localhost:5173' \
 --header 'Content-Type: application/json' \
 --data '{

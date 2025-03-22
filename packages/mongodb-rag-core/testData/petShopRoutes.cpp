@@ -67,7 +67,7 @@ void handle_post(http_request request) {
 }
 
 int main() {
-  uri_builder uri(U("http://localhost:3000"));
+  uri_builder uri(U("/api"));
   auto addr = uri.to_uri().to_string();
   http_listener listener(addr);
 

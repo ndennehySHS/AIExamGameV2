@@ -232,7 +232,7 @@ npm run dev
 
 ```
 
-By default, the server should be accessible through http://localhost:3000/.
+By default, the server should be accessible through /api/.
 
 ### Testing
 

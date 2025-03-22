@@ -6,7 +6,7 @@ import { mockNextFetchResult } from "./test-utils";
 import { ConversationStateProvider } from "./ConversationStateProvider";
 
 const baseUseConversationParams = {
-  serverBaseUrl: "http://localhost:3000/api/v1",
+  serverBaseUrl: "/api/v1",
   shouldStream: false,
 } satisfies UseConversationParams;
 

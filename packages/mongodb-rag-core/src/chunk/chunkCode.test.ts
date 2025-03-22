@@ -161,7 +161,7 @@ describe("chunkCode", () => {
       "return responseObj;\n      })\n      .then([&request](json::value responseObj) {\n        request.reply(status_codes::Created, responseObj);\n      })\n      .wait();\n}"
     );
     expect(chunks[7].text).toBe(
-      'int main() {\n  uri_builder uri(U("http://localhost:3000"));\n  auto addr = uri.to_uri().to_string();\n  http_listener listener(addr);\n\n  listener.support(methods::GET, handle_get);\n  listener.support(methods::POST, handle_post);\n\n  try {\n    listener.open()\n        .then([&listener]() {\n          std::wcout << U("Starting to listen at ")\n                     << listener.uri().to_string() << std::endl;\n        })\n        .wait();'
+      'int main() {\n  uri_builder uri(U("/api"));\n  auto addr = uri.to_uri().to_string();\n  http_listener listener(addr);\n\n  listener.support(methods::GET, handle_get);\n  listener.support(methods::POST, handle_post);\n\n  try {\n    listener.open()\n        .then([&listener]() {\n          std::wcout << U("Starting to listen at ")\n                     << listener.uri().to_string() << std::endl;\n        })\n        .wait();'
     );
     expect(chunks[8].text).toBe(
       'std::string line;\n    std::getline(std::cin, line);\n  } catch (const std::exception &e) {\n    std::wcerr << U("An error occurred: ") << e.what() << std::endl;\n  }\n\n  return 0;\n}'
